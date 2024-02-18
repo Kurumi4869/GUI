@@ -72,7 +72,7 @@ end
 end)
 end
 
-
+--[[
 
 -- [Body Gyro]£
    spawn(function()
@@ -111,7 +111,7 @@ spawn(function()
   end)
 
 
-
+]]
 --select weapon
     function EquipWeapon(ToolSe)
         if not _G.NotAutoEquip then
@@ -182,16 +182,16 @@ spawn(function()
   while wait() do
     pcall(function()
         if _G.AutoFBoss then
-    for i, v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
+    for _, v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
               	            if v.Humanoid.DisplayName == "Gojo [LV.2500]" or v.Humanoid.DisplayName == "Uraume [LV.7500]" or v.Humanoid.DisplayName == "Sukuna [LV.2500]" or v.Humanoid.DisplayName == "Kashimo [LV.3250]" or v.Humanoid.DisplayName == "Artoria [LV.3750]" or v.Humanoid.DisplayName == "Gojo [Unleashed] [LV.6500]" or v.Humanoid.DisplayName == "Rimuru [LV.6250]" or v.Humanoid.DisplayName == "Shank [LV.2500]" or v.Humanoid.DisplayName == "Sand Man [LV.2000]" or v.Humanoid.DisplayName == "Bomb Man [LV.1500]" or v.Humanoid.DisplayName == "Snow Bandit Leader [LV.2350]" then
                   if v.Humanoid.Health > 0 then
 
           repeat task.wait()
             TPCHEST()
 EquipWeapon(ChooseWeapon)
-            TP(v.HumanoidRootPart.CFrame * CFrame.new(0,5,0) * CFrame.Angles(math.rad(-90),0,0))
+            TP(v.HumanoidRootPart.CFrame * CFrame.new(0,4.5,0) * CFrame.Angles(math.rad(-90),0,0))
             click()
-          until _G.FarmSelect == false or v.Humanoid.Health <= 0
+          until _G.AutoFBoss == false or v.Humanoid.Health <= 0
         end
 end
 
@@ -394,7 +394,7 @@ GeneralBossv1:AddToggle('Farm', {
 GeneralBossv1:AddToggle('Farm', {
       Text = 'WhiteScreen',
       Default = false,
-      Callback = function(v)
+      Callback = function(value)
     _G.WhiteScreen = value
 if _G.WhiteScreen == true then
     game:GetService("RunService"):Set3dRenderingEnabled(false)
