@@ -72,7 +72,6 @@ end
 end)
 end
 
---[[
 
 -- [Body Gyro]£
    spawn(function()
@@ -111,7 +110,7 @@ spawn(function()
   end)
 
 
-]]
+
 --select weapon
     function EquipWeapon(ToolSe)
         if not _G.NotAutoEquip then
