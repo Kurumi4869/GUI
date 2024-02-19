@@ -97,7 +97,6 @@ function up4()
         end)
     end
 end)
-end
 
 
 local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
