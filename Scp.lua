@@ -1,4 +1,106 @@
-    	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local PhantomForcesWindow = Library:NewWindow("Kurumi")
+local KillingCheats = PhantomForcesWindow:NewSection("Auto Stats")
+KillingCheats:CreateToggle("Melee", function(value)
+    _G.up1 = value
+    print('up1: ', value);
+    if value then
+        up1();
+    end
+end)
+
+function up1()
+    spawn(function()
+        _G.up1 = true
+        while _G.up1 do wait()
+        pcall(function()
+            local args = {
+                [1] = "Melee",
+                [2] = 100
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
+            wait()
+        end)
+    end
+end)
+end
+
+KillingCheats:CreateToggle("Weapon", function(value)
+    _G.up2 = value
+    print('up2: ', value);
+    if value then
+        up2();
+    end
+end)
+
+function up2()
+    spawn(function()
+        _G.up2 = true
+        while _G.up2 do wait()
+        pcall(function()
+            local args = {
+                [1] = "Weapon",
+                [2] = 100
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
+            wait()
+        end)
+    end
+end)
+end
+KillingCheats:CreateToggle("Defense", function(value)
+    _G.up3 = value
+    print('up3: ', value);
+    if value then
+        up3();
+    end
+end)
+
+function up3()
+    spawn(function()
+        _G.up3 = true
+        while _G.up3 do wait()
+        pcall(function()
+            local args = {
+                [1] = "Defense",
+                [2] = 100
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
+            wait()
+        end)
+    end
+end)
+end
+KillingCheats:CreateToggle("DemonFruit", function(value)
+    _G.up4 = value
+    print('up4: ', value);
+    if value then
+        up4();
+    end
+end)
+
+function up4()
+    spawn(function()
+        _G.up4 = true
+        while _G.up4 do wait()
+        pcall(function()
+            local args = {
+                [1] = "DemonFruit",
+                [2] = 100
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
+            wait()
+        end)
+    end
+end)
+end
+
+
+local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
         	local g = game
         	local w = g.Workspace
         	local l = g.Lighting
