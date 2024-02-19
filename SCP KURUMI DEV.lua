@@ -1,105 +1,4 @@
-local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
-local PhantomForcesWindow = Library:NewWindow("Kurumi")
-local KillingCheats = PhantomForcesWindow:NewSection("Auto Stats")
-KillingCheats:CreateToggle("Melee", function(value)
-    _G.up1 = value
-    print('up1: ', value);
-    if value then
-        up1();
-    end
-end)
-
-function up1()
-    spawn(function()
-        _G.up1 = true
-        while _G.up1 do wait()
-        pcall(function()
-            local args = {
-                [1] = "Melee",
-                [2] = 100
-            }
-            
-            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
-            wait()
-        end)
-    end
-end)
-end
-
-KillingCheats:CreateToggle("Weapon", function(value)
-    _G.up2 = value
-    print('up2: ', value);
-    if value then
-        up2();
-    end
-end)
-
-function up2()
-    spawn(function()
-        _G.up2 = true
-        while _G.up2 do wait()
-        pcall(function()
-            local args = {
-                [1] = "Weapon",
-                [2] = 100
-            }
-            
-            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
-            wait()
-        end)
-    end
-end)
-end
-KillingCheats:CreateToggle("Defense", function(value)
-    _G.up3 = value
-    print('up3: ', value);
-    if value then
-        up3();
-    end
-end)
-
-function up3()
-    spawn(function()
-        _G.up3 = true
-        while _G.up3 do wait()
-        pcall(function()
-            local args = {
-                [1] = "Defense",
-                [2] = 100
-            }
-            
-            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
-            wait()
-        end)
-    end
-end)
-end
-KillingCheats:CreateToggle("DemonFruit", function(value)
-    _G.up4 = value
-    print('up4: ', value);
-    if value then
-        up4();
-    end
-end)
-
-function up4()
-    spawn(function()
-        _G.up4 = true
-        while _G.up4 do wait()
-        pcall(function()
-            local args = {
-                [1] = "DemonFruit",
-                [2] = 100
-            }
-            
-            game:GetService("ReplicatedStorage").Remotes.UpStats:FireServer(unpack(args))
-            wait()
-        end)
-    end
-end)
-end
-
-local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+    	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
         	local g = game
         	local w = g.Workspace
         	local l = g.Lighting
@@ -174,6 +73,7 @@ end)
 end
 
 
+
 -- [Body Gyro]£
    spawn(function()
 			while task.wait() do
@@ -209,7 +109,6 @@ spawn(function()
       end)
     end)
   end)
-
 
 
 --select weapon
@@ -282,6 +181,7 @@ spawn(function()
   while wait() do
     pcall(function()
         if _G.AutoFBoss then
+          TPCHEST()
     for _, v in pairs(game:GetService("Workspace").Lives:GetChildren()) do
               	            if v.Humanoid.DisplayName == "Gojo [LV.2500]" or v.Humanoid.DisplayName == "Uraume [LV.7500]" or v.Humanoid.DisplayName == "Sukuna [LV.2500]" or v.Humanoid.DisplayName == "Kashimo [LV.3250]" or v.Humanoid.DisplayName == "Artoria [LV.3750]" or v.Humanoid.DisplayName == "Gojo [Unleashed] [LV.6500]" or v.Humanoid.DisplayName == "Rimuru [LV.6250]" or v.Humanoid.DisplayName == "Shank [LV.2500]" or v.Humanoid.DisplayName == "Sand Man [LV.2000]" or v.Humanoid.DisplayName == "Bomb Man [LV.1500]" or v.Humanoid.DisplayName == "Snow Bandit Leader [LV.2350]" then
                   if v.Humanoid.Health > 0 then
@@ -343,9 +243,7 @@ local FarmBossGem = {
   }
 
 local GeneralBossCheck = FarmBossGem.GeneralBoss:AddLeftGroupbox('Check Boss')
-local GeneralBossv1 = FarmBossGem.GeneralBoss:AddRightGroupbox('Farming')
 
-GeneralBossCheck:AddLabel('[ Check Gojo ]')
 
 local GojoC = GeneralBossCheck:AddLabel('Gojo Status')
         spawn(function()
@@ -360,8 +258,6 @@ local GojoC = GeneralBossCheck:AddLabel('Gojo Status')
             end
         end)
 
-GeneralBossCheck:AddLabel('[ Check Sukuna ]')
-
 local SukunaC = GeneralBossCheck:AddLabel('Sukuna Status')
         spawn(function()
             while wait() do
@@ -374,9 +270,6 @@ local SukunaC = GeneralBossCheck:AddLabel('Sukuna Status')
                 end)
             end
         end)
-
-
-GeneralBossCheck:AddLabel('[ Check Rimuru ]')
 
 local RimuruC = GeneralBossCheck:AddLabel('Rimuru Status')
         spawn(function()
@@ -391,8 +284,6 @@ local RimuruC = GeneralBossCheck:AddLabel('Rimuru Status')
             end
         end)
         
-GeneralBossCheck:AddLabel('[ Check Uraume ]')
-
 local UraumeC = GeneralBossCheck:AddLabel('Uraume Status')
         spawn(function()
             while wait() do
@@ -405,8 +296,6 @@ local UraumeC = GeneralBossCheck:AddLabel('Uraume Status')
                 end)
             end
         end)
-
-GeneralBossCheck:AddLabel('[ Check Artoria ]')
 
 local ArtoriaC = GeneralBossCheck:AddLabel('Rumuru Artoria')
         spawn(function()
@@ -421,8 +310,6 @@ local ArtoriaC = GeneralBossCheck:AddLabel('Rumuru Artoria')
             end
         end)
         
-GeneralBossCheck:AddLabel('[ Check Kashimo ]')
-        
         local KashimoC = GeneralBossCheck:AddLabel('Kashimo Status')
                 spawn(function()
                     while wait() do
@@ -435,6 +322,139 @@ GeneralBossCheck:AddLabel('[ Check Kashimo ]')
                         end)
                     end
                 end)
+
+
+local GeneralBossv1 = FarmBossGem.GeneralBoss:AddRightGroupbox('Check Item Inventory')
+
+
+        local DemonLordSwordCheck = GeneralBossv1:AddLabel(' Demon Lord Sword ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local Rimuru = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Demon Lord's Sword" then
+                                              Rimuru = Rimuru + 1
+                                DemonLordSwordCheck:SetText("Demon Lord Sword : "..(Rimuru))
+                            else
+                                DemonLordSwordCheck:SetText("Demon Lord Sword  : "..(Rimuru))
+                                          end
+end
+                        end)
+                    end
+                end)
+
+
+        local DiamondCardCheck = GeneralBossv1:AddLabel(' Diamond Card ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local Diamond = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Diamond Card" then
+                                              Diamond = Diamond + 1
+                                DiamondCardCheck:SetText("Diamond Card : "..(Diamond))
+                            else
+                                DiamondCardCheck:SetText("Diamond Card  : "..(Diamond))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+
+--Holy Grail
+
+        local HolyCheck = GeneralBossv1:AddLabel(' Holy Grail ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local Holy = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Holy Grail" then
+                                              Holy = Holy + 1
+                                HolyCheck:SetText("Holy Grail : "..(Holy))
+                            else
+                                HolyCheck:SetText("Holy Grail  : "..(Holy))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+
+
+
+        local FishingCheck = GeneralBossv1:AddLabel(' Fishing Rod ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local Fishing = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Fishing Rod" then
+                                              Fishing = Fishing + 1
+                                FishingCheck:SetText("Fishing Rod : "..(Fishing))
+                            else
+                                FishingCheck:SetText("Fishing Rod  : "..(Fishing))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+
+
+
+        local SukunaFingerCheck = GeneralBossv1:AddLabel(' Sukuna Finger ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local FingerCheck = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Sukuna Finger" then
+                                              FingerCheck = FingerCheck + 1
+                                SukunaFingerCheck:SetText("Sukuna Finger : "..(FingerCheck))
+                            else
+                                SukunaFingerCheck:SetText("Sukuna Finger  : "..(FingerCheck))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+
+
+        local InfinityOrbCheck = GeneralBossv1:AddLabel(' Infinity Orb ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local InfinityCheck = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Infinity Orb" then
+                                              InfinityCheck = InfinityCheck + 1
+                                InfinityOrbCheck:SetText("Infinity Orb : "..(InfinityCheck))
+                            else
+                                InfinityOrbCheck:SetText("Infinity Orb  : "..(InfinityCheck))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+        local LightningorbCheck = GeneralBossv1:AddLabel(' Lightning Orb ')
+                spawn(function()
+                    while wait() do
+                        pcall(function()
+                          local LightningCheck = 0
+                            for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                          if v.Name == "Lightning Orb" then
+                                              LightningCheck = LightningCheck + 1
+                                LightningorbCheck:SetText("Lightning Orb : "..(LightningCheck))
+                            else
+                                LightningorbCheck:SetText("Lightning Orb  : "..(LightningCheck))
+                                          end
+                          end
+                        end)
+                    end
+                end)
+                
+local GeneralBossv1 = FarmBossGem.GeneralBoss:AddRightGroupbox('Farming')
+
 
   GeneralBossv1:AddDropdown('Select Weapon', {
       Values = {"Sword" , "Melee"},
@@ -594,3 +614,4 @@ ThemeManager:ApplyToTab(Fruit['UI Settings'])
 -- You can use the SaveManager:LoadAutoloadConfig() to load a config
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
+
